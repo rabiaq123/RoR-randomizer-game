@@ -1,0 +1,10 @@
+<h1>New User</h1>
+
+<% if logged_in? %>
+  <p>You are already logged in.</p>
+  <%= link_to 'View Profile', current_user %>
+<% else %>
+    <%= render 'form', user: @user %>
+    <%= link_to 'Home', root_path %> |
+    <%= link_to "Login", login_path %></p>
+<% end %>

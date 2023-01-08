@@ -1,0 +1,18 @@
+<h1>Play Game</h1>
+
+<% if logged_in? %>
+    <h3>Welcome, <%= current_user.username %></h3>
+    <%= link_to 'View Profile', @current_user %>
+    <p>If you can land on two Tails and one die with 6 side up in one throw, you get a point!</p>
+    
+    <p>Points: <%= current_user.points %></p>
+    <p>Bag Contents: <%= current_user.bag_contents %></p>
+    <p>Place your bag contents in a cup and throw!</p>
+    <%= link_to "Place and Throw", play_path, method: :throw_cup %> 
+    <p>Throw results: <%= get_sideup_values %></p>
+    
+<% else %>
+    <p>You are not logged in.</p>
+    <%= link_to "Log in", login_path %>
+<% end %>
+

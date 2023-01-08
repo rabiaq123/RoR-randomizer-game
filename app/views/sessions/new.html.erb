@@ -1,0 +1,27 @@
+<p id="alert"><%= alert %></p>
+
+<h1>Login</h1>
+
+<% if logged_in? %>
+  <p>You are already logged in.</p>
+  <%= link_to 'View Profile', current_user %>
+<% else %>
+  <%= form_with(scope: :session, url: login_path) do |form| %>
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.email_field :email %>
+    </div>
+
+    <div class="field">
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Log in" %>
+    </div> 
+  <% end %>
+
+  <%= link_to 'Home', root_path %> |
+  <%= link_to "Sign up", signup_path %></p>
+<% end %>
