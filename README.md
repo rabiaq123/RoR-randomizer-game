@@ -2,7 +2,7 @@
 
 Rails Assignment
 
-This assignment asked students to use the Ruby classes developed in Assignment 1 to create a Rails application implementing a single player game played against a server.
+This assignment asked students to use the Ruby classes developed in Assignment 1 ([here](https://github.com/rabiaq123/randomizer-game-api)) to create a Rails application implementing a single-player game played against a server.
 
 ## Author Information
 
